@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéClicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 PokéClicker</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Pokédex Entries:</span>
+                    <span class="stat-value" id="pokedex">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Total Clicks:</span>
+                    <span class="stat-value" id="clicks">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Clicks/sec:</span>
+                    <span class="stat-value" id="cps">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="game-area">
+                <div class="pokemon-display">
+                    <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/pokemon/1.png" alt="Pokémon">
+                    <div class="pokemon-info">
+                        <h2 id="pokemon-name">Bulbasaur</h2>
+                        <div class="pokemon-hp">
+                            <div class="hp-bar">
+                                <div class="hp-fill" id="hp-fill"></div>
+                            </div>
+                            <span id="hp-text">0/100 HP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="click-btn" class="click-button">
+                    <span class="click-text">Click to Catch!</span>
+                </button>
+
+                <div class="multiplier-display">
+                    <span id="multiplier-text">Damage per click: 1</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="upgrades-section">
+                    <h3>🛍️ Shop</h3>
+                    <div id="upgrades-container" class="upgrades-list"></div>
+                </div>
+
+                <div class="caught-section">
+                    <h3>📚 Caught Pokémon</h3>
+                    <div id="caught-list" class="caught-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
